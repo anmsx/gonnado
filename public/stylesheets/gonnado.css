@@ -1,0 +1,74 @@
+body {
+  	line-height: 1em;
+  	font-size: 12px;
+  	background: #262626 url(/images/body_bg.png) repeat scroll 0 0;
+  	font-family: Myriad Pro, Arial, Helvetica, sans-serif;
+  	margin: 0pt;
+  	cursor: default;
+	color: silver;
+}
+
+a {
+	text-decoration:none;
+}
+
+a.gonna_do_delete {
+	color: red;
+}
+
+a.gonna_do_finished {
+	color: green;
+}
+
+
+#content {
+  	width: 900px;
+	height: 600px;
+	padding-left: 20px;
+ 	margin-left: auto;
+  	margin-right: auto;
+}
+
+#header {
+	margin-top:50px;
+	color: silver;
+}
+
+input.gonna_do {
+  	color: #444;
+  	font-size: 26px;
+  	padding: 5px;
+    width:700px;
+}
+
+s.finished {
+	color: #555;
+}
+
+#todo_list {
+	float:left;
+	margin-top:20px;
+	width: 350px;
+}
+
+#related {
+	margin-top:20px;
+	width: 400px;
+	float:right;
+}
+
+
+#alertbox
+{
+	overflow: hidden;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	height: 0;
+	color: #000;
+	font: 20px/40px arial, sans-serif;
+	opacity: .9;
+}

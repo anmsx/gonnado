@@ -1,0 +1,4 @@
+$('#related').html("");
+<% @twits.each do |t| %>
+	$('#related').append("<%= escape_javascript(raw(t.text)) %><br /><br />");
+<% end %>

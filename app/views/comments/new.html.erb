@@ -1,0 +1,14 @@
+<%= render 'todos/show'%>
+
+<br /><br />
+
+<%= simple_form_for [@todo, Comment.new], :remote => true do |f| %>
+	<%= label :todo, :message, 'Comment ...' %><br /><br />
+	<%= f.input :message, :label => false %>
+<% end %>
+
+<script>
+	$(document).ready(function() {
+		$('#comment_message').focus();
+	});
+</script>

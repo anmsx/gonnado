@@ -1,0 +1,8 @@
+<ul>
+	<% @todo.comments.each do |comment|%>
+		<li>
+			<%= comment.message %>
+			<%= link_to raw('&times;'), [@todo, comment], :method => 'delete', :remote => true, :class => 'gonna_do_delete'%>
+		</li>
+	<% end%>
+</ul>

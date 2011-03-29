@@ -1,0 +1,22 @@
+<% if @todos.length == 0 %>
+	<h1> woohuu, nothing to do!!! </h1>
+<% else %>
+	<h1> today I will: </h1>
+<% end %>
+
+
+<% @todos.each do |todo| %>
+  <p>
+    <h3>
+		<%= link_to_unless todo.finished?, raw('&#x2714;'), finish_todo_path(todo), :method => 'post', :remote => true, :class => 'gonna_do_finished'%>
+		<%= link_to raw('&times;'), todo, :method => 'delete', :remote => true, :class => 'gonna_do_delete'%>
+		&middot; 
+		<% if todo.finished? %>
+			<s class="finished"><%= todo.title %></s>
+		<% else %>
+			<%= todo.title %>
+		<% end %>
+		<%= link_to raw('&rarr;'), todo %>
+	</h3>
+  </p>
+<% end %>

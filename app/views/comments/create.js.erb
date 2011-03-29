@@ -1,0 +1,4 @@
+$('#comments_list').html("");
+$('#comments_list').html("<%= escape_javascript(render 'comments/list') %>");
+$('#comment_message').val('');
+alertbox('<%= notice %>');

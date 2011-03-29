@@ -1,0 +1,11 @@
+<%= simple_form_for @todo, :remote => true do |f| %>
+	<%= label :todo, :title, 'I\'m gonna ...' %><br /><br />
+	<%= f.input :title, :label => false, :input_html => {:class => 'gonna_do'} %>
+<% end %>
+
+<script>
+	$(document).ready(function() {
+		$('#todo_title').focus();
+		//$('#todo_title').DefaultValue('... do something');
+		});
+</script>

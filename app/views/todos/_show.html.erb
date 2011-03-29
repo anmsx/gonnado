@@ -1,0 +1,28 @@
+<p>
+	<h2>
+		<% if @todo.finished? %>
+			<s class="finished"><%= @todo.title %></s>
+		<% else %>
+			<%= @todo.title %>
+		<% end %>
+	</h2>
+</p>
+
+<p>
+	<% if @todo.description.nil? %>
+		<i>No description.</i>
+	<% else %>
+		<%= @todo.description %>
+	<% end %>
+</p>
+
+<p>
+	<%= link_to_unless @todo.finished?, raw('&#x2714;'), finish_todo_path(@todo), :method => 'post', :remote => true, :class => 'gonna_do_finished'%>
+	<%= link_to raw('&times;'), @todo, :method => 'delete', :remote => false, :class => 'gonna_do_delete'%>
+
+	<%= link_to raw('New comment'), new_todo_comment_path(@todo)%>
+</p>
+
+<div id="comments_list">
+	<%= render 'comments/list'%>
+</div>
